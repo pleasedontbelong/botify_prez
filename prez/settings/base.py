@@ -65,9 +65,9 @@ MIDDLEWARE_CLASSES = (
     'pipeline.middleware.MinifyHTMLMiddleware',
 )
 
-ROOT_URLCONF = 'django_boot.urls'
+ROOT_URLCONF = 'prez.urls'
 
-WSGI_APPLICATION = 'django_boot.wsgi.application'
+WSGI_APPLICATION = 'prez.wsgi.application'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
