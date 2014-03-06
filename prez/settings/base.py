@@ -32,6 +32,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 TEMPLATE_LOADERS = (
+    'jingo.Loader',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
@@ -97,7 +98,7 @@ STATICFILES_FINDERS = (
 PIPELINE_CSS = {
     'main-css': {
         'source_filenames': (
-            'css/main.css',
+            'css/style.css',
         ),
         'output_filename': 'compress/css/main.min.css',
         'extra_context': {
@@ -130,5 +131,16 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
+    ]
+}
+
+# Jinja2
+JINGO_INCLUDE_PATTERN = r'\.jinja2'
+JINJA_CONFIG = {
+    'autoescape': False,
+    'extensions': [
+        'jinja2.ext.i18n',
+        'jinja2.ext.with_',
+        'pipeline.jinja2.ext.PipelineExtension'
     ]
 }

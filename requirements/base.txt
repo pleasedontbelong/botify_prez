@@ -28,3 +28,5 @@ django-model-utils
 django-braces==1.0.0
 
 django-pipeline
+
+jingo
