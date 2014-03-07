@@ -112,8 +112,9 @@ PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
 PIPELINE_JS = {
     'main-js': {
         'source_filenames': (
+            'vendor/jquery/dist/jquery.min.js',
             'vendor/bootstrap/dist/js/bootstrap.min.js',
-            'main.js',
+            'js/main.js',
         ),
         'output_filename': 'js/stats.js',
     }
