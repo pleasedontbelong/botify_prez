@@ -98,7 +98,8 @@ STATICFILES_FINDERS = (
 PIPELINE_CSS = {
     'main-css': {
         'source_filenames': (
-            'css/style.css',
+            'vendor/bootstrap/dist/css/bootstrap.min.css',
+            'css/main.css',
         ),
         'output_filename': 'compress/css/main.min.css',
         'extra_context': {
@@ -111,12 +112,13 @@ PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
 PIPELINE_JS = {
     'main-js': {
         'source_filenames': (
-            'js/main.js',
+            'vendor/bootstrap/dist/js/bootstrap.min.js',
+            'main.js',
         ),
-        'output_filename': 'compress/js/main.min.js',
-    },
+        'output_filename': 'js/stats.js',
+    }
 }
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
+# PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
 
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
