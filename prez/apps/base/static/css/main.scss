@@ -1,0 +1,15 @@
+body {
+	font-size: 18px;
+	h1 {
+		padding-top: 60px;
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 2em;
+		&.active{
+			font-size: 3em;
+			color: green;
+		}
+	}
+
+}
