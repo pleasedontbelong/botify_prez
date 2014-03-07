@@ -12,3 +12,4 @@ htmlcov/
 .sass-cache/
 Gemfile.lock
 node_modules
+prez/apps/base/static/vendor/*
